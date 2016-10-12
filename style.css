@@ -1,0 +1,85 @@
+/***************************
+BASE STYLES
+***************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+
+/***************************
+HEADER SECTION
+***************************/
+header {
+    height: 25vh;
+    background-color: darkgrey;
+    color: black;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
+    font-family: 'Bungee Inline', cursive;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+
+/***************************
+CALCULATOR SECTION
+***************************/
+
+.calculator-body {
+    background-color: slategrey;
+    width: 95%;
+    margin: 0 auto 30px;
+    height: 500px;
+    padding: 25px 5px;
+}
+
+.display {
+    height: 50px;
+    background-color: black;
+}
+
+.display,
+.keys {
+    margin: 0 auto 25px;
+    width: 95%;
+}
+
+button {
+    /*padding: 5px 15px;*/
+    margin: 2px;
+    font-family: 'Bungee Inline', cursive;
+    border-radius: 10px;
+    font-size: 1.1em;
+
+
+}
+
+.arithmetic-keys button{
+    display: block;
+}
+
+.arithmetic-keys {
+    float: right;
+    width: 25%;
+}
+
+.other-than-arithmetic-keys {
+    float: left;
+    width: 75%;
+
+}
+
+
+
+
+
+

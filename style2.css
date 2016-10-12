@@ -1,0 +1,180 @@
+/***************************
+BASE STYLES
+***************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+.calculator-body {
+    background-color: rgb(31,38,64);
+}
+/***************************
+HEADER SECTION
+***************************/
+header {
+    height: 25vh;
+    background: radial-gradient(rgb(31,38,64),rgb(55,65,102),rgb(21,30,64));
+    color: lightgrey;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
+    font-family: 'Bungee Inline', cursive;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
+}
+
+main,
+#wrapper,
+html {
+    background-color: lightgrey;
+}
+/***************************
+CALCULATOR SECTION
+***************************/
+
+.calculator-body {
+
+    width: 95%;
+    margin: 0 auto 30px;
+    height: 500px;
+    padding: 35px 5px;
+    border: 2px solid black;
+
+    border-radius: 5px;
+}
+
+.display {
+    height: 50px;
+    background-color: rgb(175,182,209);
+    box-shadow: inset 0 0 5px 5px black;
+}
+
+.display,
+.keys {
+    margin: 0 auto 25px;
+    width: 95%;
+}
+
+
+/***************************
+BUTTONS
+***************************/
+
+button,
+.display {
+    border-radius: 10px;
+}
+
+button {
+    /*padding: 5px 15px;*/
+    margin: 3px;
+    font-family: 'Bungee Inline', cursive;
+    border-radius: 10px;
+    font-size: 1.1em;
+    width: 25%;
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+
+.clear-keys,
+.equation-keys-zero,
+.row1,
+.row2,
+.row3 {
+    display: flex;
+}
+.clear-keys button:first-of-type {
+    flex-grow: 2;
+}
+
+.clear-keys button:last-of-type {
+    flex-grow: 2;
+}
+
+.equation-keys-zero button,
+.row1 button,
+.row2 button,
+.row3 button {
+    flex-grow: 2;
+}
+
+.arithmetic-keys {
+    background-color: rgb(105,118,163)
+}
+
+.clear-keys button {
+    background-color: rgb(55,65,102)
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+/***************************
+MEDIA QUERIES
+***************************/
+
+@media (min-width: 480px) {
+    .calculator-body{
+        width: 65%;
+    }
+
+}
+
+@media (min-width: 601px) {
+    .calculator-body{
+        width: 55%;
+        box-shadow: 10px 10px 10px grey;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .calculator-body{
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .calculator-body{
+        width: 45%;
+        padding: 50px 75px;
+
+    }
+    h1 {
+        font-size: 3.25em;
+
+    }
+    header {
+        position:relative;
+    }
+    h1 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+    button {
+        margin: 5px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
