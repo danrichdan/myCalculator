@@ -4,15 +4,20 @@ var input_index = 0;
 var answer;
 
 function apply_click_handlers(){
-
-    $('.operands').click(receive_operand);
-    $('.operators').click(receive_operator);
-    $('.clear').click(clear);
+//LFZ START
+    $('.operands').click(receive_operand); /*This adds the click event to the element with the operands class
+    and has the receive_operand function as a parameter*/
+    $('.operators').click(receive_operator);/*This adds the click event to the element with the operators class
+     and has the receive_operator function as a parameter*/
+    $('.clear').click(clear);/* This applies the click event to the element with the clear class and has the clear
+    function as a parameter*/
     //$('.clear-everything').click(clearEverything);
-    $('.equals').click(doMath);
+    $('.equals').click(doMath); /*This applies the click event to the element with the equals class and has the
+     doMath function as the parameter*/
+    //LFZ END
 }
 
-//INPUTTING OPERATOR
+//INPUTTING OPERAND
 function receive_operand(){
     // if (answer == undefined) {
     input_array[input_index] += $(this).text();
@@ -31,16 +36,24 @@ function receive_operand(){
 //INPUTTING OPERATOR
 function receive_operator() {
     //  if (answer == undefined) {
-    console.log('we be in receive operator land');
-    input_index++;
-    input_array[input_index] = $(this).text();
+    //LFZ START
+    console.log('we be in receive operator land');/* This is a console log used to show that the function is being
+    called*/
+    input_index++;/*This increments the input_array's index from the operators index to an empty index where the
+     operator will go*/
+    input_array[input_index] = $(this).text(); /*This assigns the text being input into the current index
+     of the input_array*/
 
-    $('.display-text span').append(input_array[input_index]);
-    console.log('input_Array= ', input_array);
+    $('.display-text span').append(input_array[input_index]);/*This adds the value of the index of the input array
+     into the dom and displays it in the span element with the the display-text class*/
+    console.log('input_Array= ', input_array);//this logs the current value of the array for testing purposes
 
-    input_index++;
-    input_array[input_index] = '';
-    return input_array;
+    input_index++;/*This moves the current index from the index where the operator occupies and moves to the next
+     empty index for the next operand*/
+    input_array[input_index] = '';/*this ensures that the current index is empty*/
+    return input_array; /*this returns the entire value of the array so the values can be used as parameters in the
+     doMath function*/
+    //LFZ END
     /*} else {
 
      input_array[input_index] = '';
@@ -56,6 +69,7 @@ function receive_operator() {
 
 //MATH OPERATIONS
 function doMath(receive_operator) {
+
     $('.display-text span').html('');
     var operand1 = parseInt(input_array[input_array.length-3]);
     var operator = input_array[input_array.length-2];
