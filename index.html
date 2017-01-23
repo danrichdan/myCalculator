@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <script src="script2.js"></script>
+   <!-- <script>
+        //callback function defined
+        function callback(type, value, item) {
+            switch (value) {
+                case undefined:
+                    $('.display-text').html("");
+                    break;
+                default:
+                    $('.display-text').html(value);
+                    break;
+            }
+        }
+        // my_calculator - creates a new calculator object
+        var my_calculator = new calculator(callback);
+        //after DOM load add click handlers to all buttons
+        $(document).ready(function () {
+            $('button').on('click', function () {
+                var val = $(this).text();
+                switch (val) {
+                    case 'AC':
+                        my_calculator.allClear();
+                        break;
+                    default:
+                        my_calculator.addItem($(this).text());
+                        break;
+                }
+            });
+        })
+    </script>-->
 </head>
 <body>
 <div id="wrapper">
@@ -12,40 +44,42 @@
     <main>
         <div class="calculator-body">
             <div class="display">
-
+              <div class="display-text">
+                <span></span>
+              </div>
             </div>
             <div class="keys">
                 <div class="other-than-arithmetic-keys">
                     <div class="clear-keys">
-                        <button type="button">C</button>
-                        <button type="button">CE</button>
+                        <button type="button" class="clear">C</button>
+                        <button type="button" class="clear-everything">CE</button>
                     </div>
                     <div class="numbers-equations">
                         <div class="numeric-keys">
                             <div class="row1">
-                                <button type="button">7</button>
-                                <button type="button">8</button>
-                                <button type="button">9</button>
-                                <button type="button" class="arithmetic-keys">/</button>
+                                <button type="button" class="operands">7</button>
+                                <button type="button" class="operands">8</button>
+                                <button type="button" class="operands">9</button>
+                                <button type="button" class="arithmetic-keys operators">/</button>
                             </div>
                             <div class="row2">
-                                <button type="button">4</button>
-                                <button type="button">5</button>
-                                <button type="button">6</button>
-                                <button type="button" class="arithmetic-keys">*</button>
+                                <button type="button" class="operands">4</button>
+                                <button type="button" class="operands">5</button>
+                                <button type="button" class="operands">6</button>
+                                <button type="button" class="arithmetic-keys operators">*</button>
                             </div>
                             <div class="row3">
-                                <button type="button">1</button>
-                                <button type="button">2</button>
-                                <button type="button">3</button>
-                                <button type="button" class="arithmetic-keys">-</button>
+                                <button type="button" class="operands">1</button>
+                                <button type="button" class="operands">2</button>
+                                <button type="button" class="operands">3</button>
+                                <button type="button" class="arithmetic-keys operators">-</button>
                             </div>
                         </div>
                         <div class="equation-keys-zero">
-                            <button type="button">0</button>
+                            <button type="button" class="operands">0</button>
                             <button type="button">.</button>
-                            <button type="button">=</button>
-                            <button type="button" class="arithmetic-keys">+</button>
+                            <button type="button" class="equals">=</button>
+                            <button type="button" class="arithmetic-keys operators">+</button>
                         </div>
                         <!--<div class="arithmetic-keys">
                             <button type="button">/</button>
