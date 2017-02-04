@@ -13,6 +13,12 @@ header,
 .calculator-body {
     background-color: rgb(31,38,64);
 }
+
+html,
+#wrapper {
+    height: 100vh;
+}
+
 /***************************
 HEADER SECTION
 ***************************/
@@ -23,13 +29,18 @@ header {
     text-align: center;
     padding: 25px;
     border-bottom: 2px solid black;
-    margin-bottom: 25px;
     font-family: 'Bungee Inline', cursive;
+    position:relative;
+    font-size: 2.5em;
 }
 
 h1 {
     text-transform: uppercase;
     text-shadow: 2px 2px 5px black;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 main,
@@ -37,23 +48,28 @@ main,
 html {
     background-color: lightgrey;
 }
+main {
+    height: 100%;
+    padding-top: 50px;
+}
+
+
 /***************************
 CALCULATOR SECTION
 ***************************/
 
 .calculator-body {
-
-    width: 95%;
+    width: 85%;
     margin: 0 auto 30px;
-    height: 500px;
+    height: 75%;
     padding: 35px 5px;
     border: 2px solid black;
-
     border-radius: 5px;
+    font-size: 3em;
 }
 
 .display {
-    height: 50px;
+    height: 20%;
     background-color: rgb(175,182,209);
     box-shadow: inset 0 0 5px 5px black;
     display: flex;
@@ -63,6 +79,7 @@ CALCULATOR SECTION
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 2.5em;
 }
 
 .display,
@@ -131,70 +148,70 @@ button:hover {
 MEDIA QUERIES
 ***************************/
 
-@media (min-width: 480px) {
-    .calculator-body{
-        width: 65%;
-    }
+/*@media (min-width: 480px) {*/
+    /*.calculator-body{*/
+        /*width: 65%;*/
+    /*}*/
 
-}
+/*}*/
 
-@media (min-width: 601px) {
-    .calculator-body{
-        width: 55%;
-        box-shadow: 10px 10px 10px grey;
-    }
+/*@media (min-width: 601px) {*/
+    /*.calculator-body{*/
+        /*width: 55%;*/
+        /*box-shadow: 10px 10px 10px grey;*/
+    /*}*/
 
-}
+/*}*/
 
-@media (min-width: 769px) {
-    .calculator-body{
-        width: 50%;
-    }
+/*@media (min-width: 769px) {*/
+    /*.calculator-body{*/
+        /*width: 50%;*/
+    /*}*/
 
-}
+/*}*/
 
-@media (min-width: 1025px) {
-    .calculator-body{
-        width: 45%;
-        padding: 50px 75px;
+/*@media (min-width: 1025px) {*/
+    /*.calculator-body{*/
+        /*width: 45%;*/
+        /*padding: 50px 75px;*/
 
-    }
-    h1 {
-        font-size: 3.25em;
+    /*}*/
+    /*h1 {*/
+        /*font-size: 3.25em;*/
 
-    }
-    header {
-        position:relative;
-    }
-    h1 {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%)
-    }
-    button {
-        margin: 5px;
-    }
-    button:hover {
-        cursor: pointer;
-    }
-}
+    /*}*/
+    /*header {*/
+        /*position:relative;*/
+    /*}*/
+    /*h1 {*/
+        /*position: absolute;*/
+        /*top: 35%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%)*/
+    /*}*/
+    /*button {*/
+        /*margin: 5px;*/
+    /*}*/
+    /*button:hover {*/
+        /*cursor: pointer;*/
+    /*}*/
+/*}*/
 
-@media (min-width: 1300px) {
-    .calculator-body {
-        width: 40%;
-        padding: 60px 85px;
+/*@media (min-width: 1300px) {*/
+    /*.calculator-body {*/
+        /*width: 40%;*/
+        /*padding: 60px 85px;*/
 
-    }
-}
+    /*}*/
+/*}*/
 
-@media (min-width: 1500px) {
-    .calculator-body {
-        width: 30%;
-        padding: 60px 85px;
+/*@media (min-width: 1500px) {*/
+    /*.calculator-body {*/
+        /*width: 30%;*/
+        /*padding: 60px 85px;*/
 
-    }
-}
+    /*}*/
+/*}*/
 
 
 
