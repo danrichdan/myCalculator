@@ -2,39 +2,9 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
     <script src="script2.js"></script>
-   <!-- <script>
-        //callback function defined
-        function callback(type, value, item) {
-            switch (value) {
-                case undefined:
-                    $('.display-text').html("");
-                    break;
-                default:
-                    $('.display-text').html(value);
-                    break;
-            }
-        }
-        // my_calculator - creates a new calculator object
-        var my_calculator = new calculator(callback);
-        //after DOM load add click handlers to all buttons
-        $(document).ready(function () {
-            $('button').on('click', function () {
-                var val = $(this).text();
-                switch (val) {
-                    case 'AC':
-                        my_calculator.allClear();
-                        break;
-                    default:
-                        my_calculator.addItem($(this).text());
-                        break;
-                }
-            });
-        })
-    </script>-->
 </head>
 <body>
 <div id="wrapper">
@@ -81,15 +51,8 @@
                             <button type="button" class="equals">=</button>
                             <button type="button" class="arithmetic-keys operators">+</button>
                         </div>
-                        <!--<div class="arithmetic-keys">
-                            <button type="button">/</button>
-                            <button type="button">*</button>
-                            <button type="button">-</button>
-                            <button type="button">+</button>
-                        </div>-->
                     </div>
                 </div>
-
             </div>
         </div>
     </main>
