@@ -1,6 +1,9 @@
 /***************************
 BASE STYLES
 ***************************/
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -62,16 +65,14 @@ div.calculator-body {
     margin: 0 auto 25px;
 }
 
-.keys {
-    max-width: 100%;
-}
 button,
 .display {
     border-radius: 10px;
 }
 
 button {
-    margin: 5px;
+    margin: 3px;
+    width: 25%;
 }
 
 .clear-keys,
@@ -81,18 +82,10 @@ button {
 .row3 {
     display: flex;
 }
-.clear-keys button:first-of-type {
-    flex-grow: 2;
-}
 
+.clear-keys button:first-of-type,
 .clear-keys button:last-of-type {
     flex-grow: 2;
 }
 
-.equation-keys-zero button,
-.row1 button,
-.row2 button,
-.row3 button {
-    flex-grow: 2;
-}
 
