@@ -23,7 +23,7 @@ html,
 HEADER SECTION
 ***************************/
 header {
-    height: 25vh;
+    height: 25%;
     background: radial-gradient(rgb(31,38,64),rgb(55,65,102),rgb(21,30,64));
     color: lightgrey;
     text-align: center;
@@ -212,9 +212,3 @@ MEDIA QUERIES
 
     /*}*/
 /*}*/
-
-
-
-
-
-
