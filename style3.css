@@ -52,6 +52,9 @@ div.calculator-body {
     height: 75px;
     background-color: rgb(175,182,209);
     box-shadow: inset 0 0 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -72,7 +75,7 @@ button,
 
 button {
     margin: 3px;
-    flex: 1 25%;
+
     background-color: white;
     flex-shrink: 1;
 }
@@ -84,6 +87,15 @@ button {
 .row3 {
     display: flex;
     justify-content: space-around;
+}
+
+.equation-keys-zero button,
+.row1 button,
+.row2 button,
+.row3 button {
+    flex-grow: 1;
+    flex: 1 25%;
+    flex-shrink: 1;
 }
 
 .clear-keys button:first-of-type,
