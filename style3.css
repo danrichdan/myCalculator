@@ -61,13 +61,16 @@ div.calculator-body {
     margin: 0 auto 25px;
 }
 
+.keys {
+    max-width: 100%;
+}
 button,
 .display {
     border-radius: 10px;
 }
 
 button {
-    margin: 3px;
+    margin: 5px;
 }
 
 .clear-keys,
