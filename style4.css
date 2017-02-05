@@ -19,6 +19,10 @@ main,
     background-color: lightgrey;
 }
 
+#wrapper {
+    height: 100vh;
+}
+
 header,
 div.calculator-body {
     background-color: rgb(31,38,64);
@@ -101,3 +105,64 @@ button {
 }
 
 
+/***************************
+MEDIA QUERIES
+***************************/
+
+@media (min-width: 360px) {
+    button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    main {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+}
+
+@media (min-width: 375px) {
+    button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    main {
+        padding-top: 30px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    div.calculator-body {
+        width: 70%;
+        margin: 0 auto;
+        padding: 30px 20px;
+        font-size: 1.9em;
+        font-weight: bold;
+    }
+
+    button {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .display {
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 3.25em;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.calculator-body {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1366px) {
+    div.calculator-body {
+        width: 35%;
+    }
+}
