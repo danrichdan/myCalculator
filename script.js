@@ -1,7 +1,10 @@
 $(document).ready(apply_click_handlers);
 var input_array = [''];
 var input_index = 0;
-var answer;
+var answer = null;
+var operand1 = null;
+var operand2 = null;
+var operator = null;
 
 function apply_click_handlers(){
     $('.operands').click(receive_operand); /*This adds the click event to the element with the operands class
@@ -10,6 +13,7 @@ function apply_click_handlers(){
      and has the receive_operator function as a parameter*/
     $('.clear').click(clear);/* This applies the click event to the element with the clear class and has the clear
     function as a parameter*/
+    $('.clear-entry').click(clearEntry);
     $('.equals').click(doMath); /*This applies the click event to the element with the equals class and has the
      doMath function as the parameter*/
 }
@@ -39,13 +43,14 @@ function receive_operator() {
      doMath function*/
 }
 
+
 //MATH OPERATIONS
 function doMath(receive_operator) {
     $('.display-text span').html('');
-    var operand1 = parseInt(input_array[input_array.length-3]);
-    var operator = input_array[input_array.length-2];
-    var operand2 = parseInt(input_array[input_array.length-1]);
-    if (input_array.length === 3 ){
+        operand1 = parseInt(input_array[input_array.length - 3]);
+        operator = input_array[input_array.length - 2];
+        operand2 = parseInt(input_array[input_array.length - 1]);
+    if (input_array.length === 3 && $(this).val('=')){
         switch(operator) {
             case '+' :
                 answer = operand1 + operand2;
@@ -53,6 +58,7 @@ function doMath(receive_operator) {
                 input_array = [''];
                 input_index = 0;
                 input_array[0] = answer;// these few lines of code make it so that the answer can be used in an equation
+                console.log("This is the answer value after the addition operation is performed : ", input_array[i]);
                 return answer;
                 break;
             case '-':
@@ -98,7 +104,14 @@ function clear() {
     $('.display-text span').html(' ');
 };
 
-
+function clearEntry() {
+    console.log("Here is the input_array at the beginning of the clearEntry function",input_array );
+    console.log("In the ClearEntry function  ");
+    input_array.pop();
+    input_array.pop();
+    console.log("Here is the input_array after popping the array",input_array );
+    $('.display-text span').html(input_array);
+};
 
 
 
