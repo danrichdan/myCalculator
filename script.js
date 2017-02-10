@@ -109,9 +109,10 @@ function clearEntry() {
     console.log("In the ClearEntry function  ");
     input_array.pop();
     input_array.pop();
-    console.log("Here is the input_array after popping the array",input_array );
-    input_array[input_index] = input_array.length -1;
-    $('.display-text span').html(input_array[input_index]);
+    input_index--;
+    input_index--;
+    console.log("Here is the input_array after popping the array",input_array[input_index]);
+    $('.display-text span').text(input_array[input_index]);
 };
 
 
